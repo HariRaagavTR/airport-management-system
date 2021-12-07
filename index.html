@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>DBMS Project</title>
+        <script>
+            function processRequest(queryNumber) {
+                url = "http://localhost:8080/q" + queryNumber.toString()
+                window.open(url, '_blank').focus();
+            }
+        </script>
+        <style>
+            .header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 5rem;
+                background-color: #8a2b06;
+                color: white;
+                display: flex;
+                align-items: center;
+                padding: 0 10%;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+                z-index: 10;
+            }
+
+            #heading {
+                position: relative;
+                left: 550px;
+                font-size: 30px;
+            }
+
+            #button-text {
+                margin: 0;
+                padding: 0;
+                font-weight: bold;
+            }
+
+            .button {
+                padding: 1rem;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+                border-radius: 14px;
+                background-color: white;
+            }
+
+            .buttons-div {
+                position: relative;
+                margin: 0;
+                padding: 0;
+                left: 400px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <div id="heading">Select Your Query</div>
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <div class="buttons-div">
+            <button onclick="processRequest(1)" class="button"><p id="button-text">Query 1</p></button>
+            <button onclick="processRequest(2)" class="button"><p id="button-text">Query 2</p></button>
+            <button onclick="processRequest(3)" class="button"><p id="button-text">Query 3</p></button>
+            <button onclick="processRequest(4)" class="button"><p id="button-text">Query 4</p></button>
+            <button onclick="processRequest(5)" class="button"><p id="button-text">Query 5</p></button>
+            <button onclick="processRequest(6)" class="button"><p id="button-text">Query 6</p></button>
+            <button onclick="processRequest(7)" class="button"><p id="button-text">Query 7</p></button>
+            <button onclick="processRequest(8)" class="button"><p id="button-text">Query 8</p></button>
+            <button onclick="processRequest(9)" class="button"><p id="button-text">Query 9</p></button>
+            <button onclick="processRequest(10)" class="button"><p id="button-text">Query 10</p></button>
+        </div>
+        
+        <br />
+
+        <h2>Simple Queries:</h2>
+        <p>
+            1. Total income from tickets per day.
+        </p>
+        <p>
+            2. Names of all serviceable countries that start with United.
+        </p>
+        <p>
+            3. All companies that are currently running the flights.
+        </p>
+        <p>
+            4. Average capacity of all flights.
+        </p>
+        <p>
+            5. Names of all pilots with ratings 'A' or 'B'.
+        </p>
+
+        <br />
+
+        <h2>Complex Queries:</h2>
+        <p>
+            6. Names of all intermediate airports between two specific airports.
+        </p>
+        <p>    
+            7. Names of all pilots with salary greater than the average salary.
+        </p>
+        <p>    
+            8. Number of airports in each country.
+        </p>
+        <p>    
+            9. Number of tickets bought by each passenger.
+        </p>
+        <p>    
+            10. Average age of employees working at each airport.
+        </p>
+    </body>
+</html>
