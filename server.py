@@ -1,8 +1,8 @@
 from http.server import HTTPServer, BaseHTTPRequestHandler
 import importlib
 
-databaseMoule = importlib.import_module('database')
-Database = databaseMoule.Database
+databaseModule = importlib.import_module('database')
+Database = databaseModule.Database
 database = Database()
 database.initDatabase()
 
